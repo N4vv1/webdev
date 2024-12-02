@@ -1,0 +1,183 @@
+/* Import Syne font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;700&display=swap');
+
+/* Apply Syne font to the body */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Syne', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9; /* Light background for the body */
+}
+
+/* Header */
+#header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 80px;
+    background-color: #E3E6F3;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.06);
+    position: relative; 
+}
+
+#header .logo {
+    position: absolute;
+    top: 5px; 
+    left: -15px; 
+    width: 120px;
+    height: auto;
+}
+
+/* Navigation Bar */
+#navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto; 
+}
+
+#navbar li {
+    list-style: none;
+    padding: 0 20px;
+    position: relative; 
+} 
+
+#navbar li a {
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    color: #1a1a1a;
+    transition: 0.3s ease;
+}
+
+#navbar li a:hover,
+#navbar li a.active {
+    color: red;
+}
+
+#navbar li a.active::after,
+#navbar li a:hover::after {
+    content: "";
+    width: 50px;
+    height: 2px;
+    background: red;
+    position: absolute;
+    left: 50%; 
+    transform: translateX(-50%);
+    bottom: -3px; 
+}
+
+
+/* Login Section */
+.login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 90vh;
+    background: url('./bg1.avif') no-repeat center center/cover;
+    padding: 20px;
+}
+
+.wrapper {
+    width: 100%;
+    max-width: 400px;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.wrapper h1 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.input-box {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 15px 0;
+}
+
+.input-box input {
+    width: 100%;
+    height: 100%;
+    padding: 0 15px;
+    border: 2px solid #ccc;
+    border-radius: 25px;
+    outline: none;
+    font-size: 16px;
+    background: #fff;
+    color: #333;
+}
+
+.input-box input::placeholder {
+    color: #aaa;
+}
+
+.input-box i {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #999;
+    font-size: 20px;
+}
+
+.remember-forgot {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    margin: 10px 0;
+}
+
+.remember-forgot a {
+    text-decoration: none;
+    color: #007BFF;
+}
+
+.remember-forgot a:hover {
+    text-decoration: underline;
+}
+
+.btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background: red;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background: darkred;
+}
+
+.register-link {
+    text-align: center;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.register-link a {
+    color: #007BFF;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.register-link a:hover {
+    text-decoration: underline;
+}
+ 

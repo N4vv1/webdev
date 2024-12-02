@@ -1,0 +1,257 @@
+    /* Import Syne font from Google Fonts */
+    @import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;700&display=swap');
+
+    /* Apply Syne font to the body */
+    html {
+        scroll-behavior: smooth;
+    }
+    
+    body {
+        font-family: 'Syne', sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f9f9f9; /* Light background for the body */
+    }
+    
+    /* Header */
+    #header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px 80px;
+        background-color: #E3E6F3;
+        box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.06);
+        position: relative; 
+    }
+    
+    #header .logo {
+        position: absolute;
+        top: 5px; 
+        left: -15px; 
+        width: 120px;
+        height: auto;
+    }
+    
+    /* Navigation Bar */
+    #navbar {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: auto; 
+    }
+    
+    #navbar li {
+        list-style: none;
+        padding: 0 20px;
+        position: relative; 
+    } 
+    
+    #navbar li a {
+        text-decoration: none;
+        font-size: 16px;
+        font-weight: 600;
+        color: #1a1a1a;
+        transition: 0.3s ease;
+    }
+    
+    #navbar li a:hover,
+    #navbar li a.active {
+        color: red;
+    }
+    
+    
+        /* Cart Section */
+        #cart {
+            padding: 30px;
+            max-width: 900px;
+            margin: 40px auto;
+            background-color: #ffffff; /* White background for clarity */
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+    
+        #cart h1 {
+            text-align: center;
+            font-size: 26px;
+            margin-bottom: 30px;
+            color: #444;
+        }
+    
+        .cart-items {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+    
+        /* Cart Item */
+        .cart-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            padding: 15px;
+            border-bottom: 1px solid #f0f0f0;
+            transition: transform 0.3s ease;
+        }
+    
+        .cart-item:hover {
+            transform: scale(1.02);
+            background-color: #f9f9f9; /* Slight hover effect */
+        }
+    
+        .cart-item img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 8px;
+            transition: transform 0.2s ease;
+        }
+    
+        .cart-item img:hover {
+            transform: scale(1.05); 
+        }
+    
+        .cart-item h3 {
+            font-size: 18px;
+            margin: 0;
+            flex: 1;
+            color: #333;
+        }
+    
+        .cart-item p {
+            font-size: 16px;
+            margin: 0;
+            color: #777;
+        }
+    
+        /* Quantity Controls */
+        .quantity-form {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+    
+        .quantity-form .btn {
+            padding: 8px 14px;
+            background-color: darkred;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+    
+        .quantity-form span {
+            font-weight: bold;
+            font-size: 16px;
+            color: #333;
+        }
+    
+        .quantity-form .btn:hover {
+            background-color: red;
+            transform: translateY(-2px);
+        }
+    
+        /* Remove Button */
+        .remove-form .btn {
+            padding: 8px 14px;
+            background-color: black;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+    
+        .remove-form .btn:hover {
+            background-color: gray;
+            transform: translateY(-2px);
+        }
+    
+        /* Cart Total */
+        .cart-total {
+            margin-top: 30px;
+            padding: 15px;
+            background-color: #f0f0f0;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            text-align: right;
+            font-size: 20px;
+            font-weight: bold;
+            color: #333;
+        }
+    
+        /* Checkout Button */
+        .checkout-button {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+    
+        .checkout-button .btn {
+            padding: 15px 30px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+    
+        .checkout-button .btn:hover {
+            background-color: #218838;
+        }
+    
+        /* Empty Cart Message */
+        #cart p {
+            text-align: center;
+            font-size: 16px;
+            margin-top: 20px;
+        }
+    
+        #cart a {
+            color: #007bff;
+            text-decoration: none;
+        }
+    
+        #cart a:hover {
+            text-decoration: underline;
+        }
+    
+        /* Responsive Design */
+        @media (max-width: 600px) {
+            #header {
+                padding: 10px;
+            }
+    
+            #navbar {
+                flex-wrap: wrap;
+                gap: 15px;
+            }
+    
+            #cart {
+                padding: 20px;
+            }
+    
+            .cart-item {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+    
+            .quantity-form {
+                gap: 8px;
+            }
+    
+            .cart-item img {
+                width: 80px;
+                height: 80px;
+            }
+    
+            .cart-total {
+                font-size: 18px;
+            }
+        }
+    

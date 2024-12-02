@@ -1,0 +1,310 @@
+/* Import Syne font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;700&display=swap');
+
+/* Apply Syne font to the body */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Syne', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: white; /* Light background for the body */
+}
+
+/* Header */
+#header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 80px;
+    background-color: #E3E6F3;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.06);
+    position: relative; 
+}
+
+#header .logo {
+    position: absolute;
+    top: 5px; 
+    left: -15px; 
+    width: 120px;
+    height: auto;
+}
+
+/* Navigation Bar */
+#navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto; 
+}
+
+#navbar li {
+    list-style: none;
+    padding: 0 20px;
+    position: relative; 
+} 
+
+#navbar li a {
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    color: #1a1a1a;
+    transition: 0.3s ease;
+}
+
+#navbar li a:hover,
+#navbar li a.active {
+    color: red;
+}
+
+#navbar li a.active::after,
+#navbar li a:hover::after {
+    content: "";
+    width: 50px;
+    height: 2px;
+    background: red;
+    position: absolute;
+    left: 50%; 
+    transform: translateX(-50%);
+    bottom: -3px; 
+}
+
+/*top cover*/
+#bg {
+    position: relative; /* Enables positioning of child elements relative to this container */
+    text-align: center; /* Ensures text is centered horizontally */
+}
+
+#bg img {
+    width: 100%; /* Makes the image take the full width of its container */
+    height: 230px; /* Keeps the specified height */
+}
+
+#bg h1 {
+    position: absolute; /* Positions the text relative to the #bg container */
+    top: 30%; /* Moves the text 50% down from the top of the container */
+    left: 50%; /* Moves the text 50% from the left of the container */
+    transform: translate(-50%, -50%); /* Centers the text both vertically and horizontally */
+    color: white; /* Makes the text stand out (change as needed) */
+    font-size: 5rem; /* Adjust the size of the text */
+    font-weight: bold; /* Makes the text bold */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Optional: adds a shadow for better readability */
+}
+
+/* Contact Section */
+.contact {
+    padding: 50px 0; /* Reduced the vertical padding */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    margin-top: -175px; /* Added negative margin to move content up */
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+}
+
+.contact-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 50px; /* Gap between sections */
+    width: 100%;
+}
+
+/* Contact Form */
+.contact-form {
+    width: 48%; /* Increased width for a larger form */
+    background-color: #fff;
+    padding: 30px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.contact-form h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.contact-form .form-group {
+    margin-bottom: 15px;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+}
+
+.contact-form button {
+    padding: 12px 30px;
+    background-color: darkred;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.contact-form button:hover {
+    background-color: red;
+}
+
+/* Contact Info */
+.contact-info {
+    width: 48%; /* Increased width for a larger contact info section */
+    padding: 30px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    border-radius: 8px;
+}
+
+.contact-info h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.contact-info p {
+    font-size: 16px;
+    margin-bottom: 15px;
+    color: #555;
+}
+
+.contact-info a {
+    font-size: 20px;
+    color: #333;
+    margin-right: 10px;
+    transition: 0.3s ease;
+}
+
+.contact-info a:hover {
+    color: #e94f4f;
+}
+
+.contact-info a i {
+    transition: 0.3s ease;
+}
+
+/* Back Button Styling */
+.back-button {
+    text-align: center;
+    margin-top: -130px; /* Adjusted margin to create space from content above */
+}
+
+.back-button button {
+    background-color: darkred; /* Dark red background */
+    color: white;
+    font-size: 16px;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.back-button button a {
+    text-decoration: none;
+    color: white;
+    display: block;
+}
+
+.back-button button:hover {
+    background-color: red; /* Red background on hover */
+}
+
+.back-button button:active {
+    background-color: darkred; /* Slightly darker red when clicked */
+    transform: translateY(2px);
+}
+
+/* Footer Section */
+#footer {
+    background-color: #f9f9f9; /* Light background to complement black text */
+    color: #000; /* Set main text color to black */
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 40px; /* Added margin-top to create space between the footer and the back button */
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.footer-container div {
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer-container h3 {
+    color: red; /* Header color remains red for emphasis */
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+.footer-container p,
+.footer-container ul,
+.footer-container a {
+    color: #000; /* Set paragraph, links, and list text to black */
+    font-size: 0.9rem;
+    transition: color 0.3s ease, transform 0.3s ease; /* Smooth color and transform transitions */
+}
+
+.footer-container ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-container ul li {
+    margin: 5px 0;
+}
+
+.footer-container ul li a {
+    color: #000; /* Link color set to black */
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition on hover */
+}
+
+.footer-container ul li a:hover {
+    color: red; /* Red color on hover for links */
+    transform: scale(1.1); /* Slightly enlarge on hover */
+}
+
+.footer-social a {
+    color: #000; /* Set social media icons to black */
+    font-size: 1.5rem;
+    margin: 0 10px;
+    transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition for color and size */
+}
+
+.footer-social a:hover {
+    color: red; /* Golden hover effect for social media icons */
+    transform: scale(1.2); /* Slightly enlarge on hover */
+}
+
+.footer-bottom {
+    background-color: #e0e0e0; /* Light gray background for footer bottom */
+    padding: 10px 0;
+    margin-top: 20px;
+    transition: background-color 0.3s ease; /* Smooth transition for background changes */
+}
+
+.footer-bottom p {
+    margin: 0;
+    font-size: 0.8rem;
+    color: #000; /* Footer bottom text color set to black */
+    transition: color 0.3s ease; /* Smooth transition for text color */
+}
